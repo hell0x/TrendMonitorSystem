@@ -1,8 +1,8 @@
-ctrl+shift+a	打开配置项
 ctrl+g			跳转到某行
 ctrl+p			打开某文件
 ctrl+w			删除某标签页			
 ctrl+d			选中一个或多个单词
-ctrl+y			删除一行
+ctrl+q			删除一行
 
+ctrl+shift+a	打开配置项
 ctrl+shift+d	复制一行
