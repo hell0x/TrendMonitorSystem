@@ -31,6 +31,7 @@
 * [Awesome](http://www.fontawesome.com.cn/) 图标库
 * [Swaggervel](https://github.com/slampenny/Swaggervel) 自动化生成接口文档包
 * [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) 自动生成规范化PHP代码包
+* [markdown]
 * ...
 
 ### 特点 ###
