@@ -1,6 +1,19 @@
 7月11日 - 7月22日
 【爬虫部分】(最好写成文档)
 1.选取10个国内最有代表性的新闻网站（主要以权威性，受欢迎度，访问量来选取）
+{
+	'华尔街见闻': 'https://wallstreetcn.com/',
+	'凤凰网财经': 'http://finance.ifeng.com/',
+	'第一财经': 'https://www.yicai.com/',
+	'环球财经': 'http://finance.huanqiu.com/',
+	'新华网': 'http://www.news.cn/',
+	'人民网': 'http://www.people.com.cn/',
+	'路透社': 'http://www.lutoushe.org/',
+	'财新网': 'http://www.caixin.com/',
+	'新浪财经': 'https://finance.sina.com.cn/',
+	'和讯网': 'http://www.hexun.com/'
+}
+
 2.结合文档给的新闻表和新闻网站概况，给出需要爬取的字段
 3.给出每个新闻网站需要爬取的新闻模块（比如网站首页的新闻头条，某些普通新闻的新闻列表）
 4.给出爬取页面的链接
