@@ -612,8 +612,8 @@ function openct(e) {
 </tr>
 <tr>
 	<td>introduction_html</td>
-	<td>string 导读html</td>
-	<td>&nbsp;</td>
+	<td>string</td>
+	<td>导读html</td>
 </tr>
 <tr>
 	<td>content</td>
@@ -726,7 +726,7 @@ function openct(e) {
 </tr>
 </tbody>
 </table>
-<h2>重要性级别events_level</h2>
+<h2>重要性级别event_levels</h2>
 <table>
 <thead>
 <tr>
@@ -747,8 +747,13 @@ function openct(e) {
 	<td>级别名称(全球性大事件，地区性大事件，国家性大事件，组织机构性事件，国内事件，一般事件，不重要性事件)</td>
 </tr>
 <tr>
-	<td>score</td>
+	<td>level</td>
 	<td>int</td>
+	<td>重要性等级</td>
+</tr>
+<tr>
+	<td>score</td>
+	<td>float</td>
 	<td>达到该级别分数(100,90,80,70,60,50,&lt;40)</td>
 </tr>
 <tr>
@@ -779,9 +784,9 @@ function openct(e) {
 	<td>ID</td>
 </tr>
 <tr>
-	<td>name</td>
+	<td>hotspot</td>
 	<td>string</td>
-	<td>热点名称名称</td>
+	<td>热点名称</td>
 </tr>
 <tr>
 	<td>hot_score</td>
@@ -865,7 +870,7 @@ function openct(e) {
 </tbody>
 </table>
 <h2>文章表articles(待定)</h2>
-<h2>网站信息表website_information</h2>
+<h2>网站信息表website_informations</h2>
 <h2>日志表logs</h2>
 <h2>评论表comments(待定)</h2>
 <h2>奖励表awards(待定)</h2>
