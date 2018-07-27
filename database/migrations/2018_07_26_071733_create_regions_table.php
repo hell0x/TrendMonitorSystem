@@ -14,9 +14,8 @@ class CreateRegionsTable extends Migration
     public function up()
     {
         Schema::create('regions', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->comment('地域代号(1-100 以内为国家 >1001为省份)');
             $table->string('region')->comment('地域名称');
-            $table->string('code')->comment('地域代号(1-100 以内为国家 >1001为省份)');
             $table->timestamps();
         });
     }

@@ -24,7 +24,7 @@ class CreateForeignKeys extends Migration
                 ->onUpdate('cascade');
         });
         Schema::table('news', function (Blueprint $table) {
-            $table->foreign('region')->references('code')->on('regions')
+            $table->foreign('region')->references('id')->on('regions')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

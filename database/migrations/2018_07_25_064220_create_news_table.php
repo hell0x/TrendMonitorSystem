@@ -20,7 +20,7 @@ class CreateNewsTable extends Migration
             $table->tinyInteger('news_type')->comment('新闻类型 (1:普通新闻 2：头条新闻 etc..)');
             $table->integer('media_id')->unsigned()->comment('媒体id');
             $table->string('author')->comment('作者');
-            $table->integer('region')->unsigned()->nullable()->comment('地区');
+            $table->integer('region')->unsigned()->nullable()->comment('地区代号');
             $table->string('title')->comment('标题');
             $table->string('subhead')->nullable()->comment('副标题');
             $table->text('introduction')->nullable()->comment('导读');
