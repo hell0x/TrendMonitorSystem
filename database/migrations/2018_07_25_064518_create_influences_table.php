@@ -26,6 +26,6 @@ class CreateInfluencesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('influences');
+        Schema::dropIfExists('influences');
     }
 }

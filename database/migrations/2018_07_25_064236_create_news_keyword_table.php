@@ -27,6 +27,6 @@ class CreateNewsKeywordTable extends Migration
      */
     public function down()
     {
-        Schema::drop('news_keyword');
+        Schema::dropIfExists('news_keyword');
     }
 }

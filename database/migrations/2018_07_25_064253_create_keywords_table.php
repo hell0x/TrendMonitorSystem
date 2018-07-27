@@ -26,6 +26,6 @@ class CreateKeywordsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('keywords');
+        Schema::dropIfExists('keywords');
     }
 }

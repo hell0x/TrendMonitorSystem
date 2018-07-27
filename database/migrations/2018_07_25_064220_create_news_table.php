@@ -15,12 +15,12 @@ class CreateNewsTable extends Migration
         Schema::create('news', function (Blueprint $table) {
             $table->increments('id');
             $table->string('news_url')->comment('新闻url');
-            $table->integer('source_id')->comment('来源id');
-            $table->integer('column_id')->comment('栏目id');
+            $table->integer('source_id')->unsigned()->comment('来源id');
+            $table->integer('column_id')->unsigned()->comment('栏目id');
             $table->tinyInteger('news_type')->comment('新闻类型 (1:普通新闻 2：头条新闻 etc..)');
-            $table->integer('media_id')->comment('媒体id');
+            $table->integer('media_id')->unsigned()->comment('媒体id');
             $table->string('author')->comment('作者');
-            $table->integer('region')->nullable()->comment('地区');
+            $table->integer('region')->unsigned()->nullable()->comment('地区');
             $table->string('title')->comment('标题');
             $table->string('subhead')->nullable()->comment('副标题');
             $table->text('introduction')->nullable()->comment('导读');
@@ -42,6 +42,6 @@ class CreateNewsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('news');
+        Schema::dropIfExists('news');
     }
 }

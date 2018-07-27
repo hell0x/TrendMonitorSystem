@@ -29,6 +29,6 @@ class CreateSourcesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('sources');
+        Schema::dropIfExists('sources');
     }
 }

@@ -25,6 +25,6 @@ class CreateWebsiteInformationsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('website_informations');
+        Schema::dropIfExists('website_informations');
     }
 }

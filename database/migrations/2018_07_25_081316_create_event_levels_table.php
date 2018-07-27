@@ -28,6 +28,6 @@ class CreateEventLevelsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('event_levels');
+        Schema::dropIfExists('event_levels');
     }
 }

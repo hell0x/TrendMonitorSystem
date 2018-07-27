@@ -26,6 +26,6 @@ class CreateFactorsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('factors');
+        Schema::dropIfExists('factors');
     }
 }
