@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOriginsTable extends Migration
+class CreateRegionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateOriginsTable extends Migration
      */
     public function up()
     {
-        Schema::create('origins', function (Blueprint $table) {
+        Schema::create('regions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('origin')->comment('地域名称');
+            $table->string('region')->comment('地域名称');
             $table->string('code')->comment('地域代号(1-100 以内为国家 >1001为省份)');
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ class CreateOriginsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('origins');
+        Schema::dropIfExists('region');
     }
 }

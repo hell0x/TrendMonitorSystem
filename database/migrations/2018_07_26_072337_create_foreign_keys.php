@@ -24,7 +24,7 @@ class CreateForeignKeys extends Migration
                 ->onUpdate('cascade');
         });
         Schema::table('news', function (Blueprint $table) {
-            $table->foreign('origin')->references('code')->on('origins')
+            $table->foreign('region')->references('code')->on('regions')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
@@ -54,7 +54,7 @@ class CreateForeignKeys extends Migration
             $table->dropForeign('news_column_id_foreign');
         });
         Schema::table('news', function(Blueprint $table) {
-            $table->dropForeign('news_origin_foreign');
+            $table->dropForeign('news_region_foreign');
         });
         Schema::table('news_keyword', function(Blueprint $table) {
             $table->dropForeign('news_keyword_news_id_foreign');

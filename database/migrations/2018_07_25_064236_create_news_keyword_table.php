@@ -14,8 +14,8 @@ class CreateNewsKeywordTable extends Migration
     {
         Schema::create('news_keyword', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('news_id')->comment('新闻id');
-            $table->integer('keyword_id')->comment('关键字id');
+            $table->integer('news_id')->unsigned()->comment('新闻id');
+            $table->integer('keyword_id')->unsigned()->comment('关键字id');
             $table->timestamps();
         });
     }

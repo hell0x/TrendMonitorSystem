@@ -27,8 +27,8 @@ class CreateNewsTable extends Migration
             $table->text('introduction_html')->nullable()->comment('导读html');
             $table->text('content')->nullable()->comment('内容');
             $table->text('content_html')->nullable()->comment('内容html');
-            $table->integer('hits')->nullable()->comment('点击数');
-            $table->integer('comments')->nullable()->comment('评论数');
+            $table->integer('hits')->unsigned()->nullable()->comment('点击数');
+            $table->integer('comments')->unsigned()->nullable()->comment('评论数');
             $table->timestamp('news_time')->comment('新闻日期');
             $table->boolean('status')->default(true)->comment('状态');
             $table->timestamps();
