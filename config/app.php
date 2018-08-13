@@ -228,4 +228,38 @@ return [
 
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | 前后端权限名称配置
+    |--------------------------------------------------------------------------
+    */
+    'permissions' => [
+        'front' => [
+            'front_view_hotspot' => '查看热点',
+            'front_view_article' => '查看文章',
+            'front_comment' => '评论',
+            'front_view_factor' => '查看因素统计',
+            'front_view_influence' => '查看影响力统计',
+            'front_report_email' => '汇报邮件',
+            'front_change_person_information' => '改变个人信息',
+        ],
+        'back' => [
+            'back_add_user' => '添加用户',
+            'back_delete_user' => '删除用户',
+            'back_update_user' => '更新用户',
+            'back_view_user' => '查看用户列表',
+            'back_manage_hotspot' => '管理热点',
+            'back_manage_factor' => '管理因素',
+            'back_manage_influence' => '管理影响力',
+            'back_manage_web_information' => '管理网站信息',
+            'back_add_article' => '增加文章',
+            'back_delete_article' => '删除文章',
+            'back_update_article' => '更新文章',
+            'back_view_article' => '修改文章',
+            'back_delete_comment' => '删除评论',
+            'back_view_comment' => '查看评论列表',
+            'back_manage_log' => '管理日志',
+        ],
+    ],
+
 ];
