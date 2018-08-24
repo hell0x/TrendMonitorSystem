@@ -19,11 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Back'],function ($router)
-{
-    $router->get('login', 'LoginController@showLoginForm')->name('admin.login');
-    $router->post('login', 'LoginController@login');
-    $router->post('logout', 'LoginController@logout');
+Route::group(['prefix' => 'admin', 'namespace' => 'Back'], function ($router) {
+    $router->get('login', 'LoginController@showLoginForm');
+    $router->post('login', 'LoginController@login')->name('admin.login');
+    $router->post('logout', 'LoginController@logout')->name('logout');
 
     $router->get('index', 'IndexController@index');
 });

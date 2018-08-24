@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Back;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -14,7 +13,6 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/admin/index';
-    protected $username;
 
     /**
      * LoginController constructor.
@@ -22,7 +20,6 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest:admin', ['except' => 'logout']);
-        $this->username = config('admin.global.username');
     }
 
     /**
