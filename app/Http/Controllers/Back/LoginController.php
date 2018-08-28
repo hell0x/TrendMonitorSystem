@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Back;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -28,6 +29,15 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         return view('back.login.index');
+    }
+
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        return redirect('/admin/login');
     }
 
     protected function guard()
