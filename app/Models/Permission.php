@@ -3,13 +3,13 @@
  * Created by weixing.
  * User: weixing
  * Date: 2018/10/23
- * Time: 17:17
+ * Time: 17:24
  */
 
-namespace App\Repositories;
+namespace App\Models;
 
 
-class UserRepository
+class Permission
 {
 
 }
