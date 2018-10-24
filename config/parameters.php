@@ -9,12 +9,15 @@
 return [
 
     'admUsers' => [
-
+        'order' => 'updated_at',
+        'direction' => 'desc',
     ],
     'roles' => [
-
+        'order' => 'updated_at',
+        'direction' => 'desc',
     ],
     'permissions' => [
-
+        'order' => 'updated_at',
+        'direction' => 'desc',
     ],
 ];

@@ -29,4 +29,12 @@ class AdmUser extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * 用户角色关系
+     */
+    public function roles()
+    {
+        return $this->belongsToMany('App\Models\Role', 'model_has_roles');
+    }
 }

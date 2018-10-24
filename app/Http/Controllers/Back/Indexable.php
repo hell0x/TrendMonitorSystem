@@ -10,7 +10,7 @@ namespace App\Http\Controllers\Back;
 
 use Illuminate\Http\Request;
 
-class Indexable
+trait Indexable
 {
 
     protected $repository;
@@ -21,7 +21,14 @@ class Indexable
     {
         $parameters = $this->getParameters($request);
 
-        $records = $this->repository->getAll(config("app.nbrPages"));
+        $records = $this->repository->getAll(config("app.nbrPages.back.$this->table"), $parameters);
+        foreach ($records as $val){
+            foreach($val->permissions as $val2){
+                print_r($val2->name."<br/>");
+            }
+//            print_r($val->permissions);
+        }
+//        $links = $records->
     }
 
     /**
@@ -30,7 +37,7 @@ class Indexable
      */
     protected function getParameters($request)
     {
-        $parameters = config("parameters".$this->table);
+        $parameters = config("parameters.$this->table");
 
         // 控制请求参数
         foreach ($parameters as $parameter => &$value) {

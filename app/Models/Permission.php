@@ -9,7 +9,16 @@
 namespace App\Models;
 
 
-class Permission
+use Illuminate\Database\Eloquent\Model;
+
+class Permission extends Model
 {
 
+    /**
+     * 权限角色关系
+     */
+    public function Roles()
+    {
+        return $this->belongsToMany('App\Models\Role');
+    }
 }

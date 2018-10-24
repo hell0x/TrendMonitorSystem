@@ -25,5 +25,8 @@ class AdmUserController
         $this->nbrPages = config('app.nbrPages.back.admUsers');
     }
 
-
+    public function get()
+    {
+        
+    }
 }

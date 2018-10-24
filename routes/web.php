@@ -20,9 +20,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Back'], function ($router) {
+    //登录
     $router->get('login', 'LoginController@showLoginForm');
     $router->post('login', 'LoginController@login')->name('admin.login');
     $router->get('logout', 'LoginController@logout')->name('admin.logout');
 
     $router->get('index', 'IndexController@index');
+
+    //角色
+    $router->get('role/index', 'RoleController@index');
 });
