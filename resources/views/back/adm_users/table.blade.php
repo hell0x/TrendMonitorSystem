@@ -10,7 +10,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    角色列表
+                    后台用户列表
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
@@ -19,20 +19,20 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>角色名</th>
-                                <td>权限类型</td>
+                                <th>用户名</th>
+                                <td>邮箱</td>
                                 <th>创建时间</th>
                                 <th>更新时间</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($roles as $role)
+                            @foreach($adm_users as $adm_user)
                                 <tr>
-                                    <td>{{ $role->id }}</td>
-                                    <td>{{ $role->name }}</td>
-                                    <td>{{ $role->guard_name }}</td>
-                                    <td>{{ $role->created_at }}</td>
-                                    <td>{{ $role->updated_at }}</td>
+                                    <td>{{ $adm_user->id }}</td>
+                                    <td>{{ $adm_user->name }}</td>
+                                    <td>{{ $adm_user->email }}</td>
+                                    <td>{{ $adm_user->created_at }}</td>
+                                    <td>{{ $adm_user->updated_at }}</td>
                                 </tr>
                             @endforeach
                             </tbody>

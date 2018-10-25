@@ -20,6 +20,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>权限名</th>
+                                <td>权限类型</td>
                                 <th>创建时间</th>
                                 <th>更新时间</th>
                             </tr>
@@ -29,6 +30,7 @@
                                 <tr>
                                     <td>{{ $permission->id }}</td>
                                     <td>{{ $permission->name }}</td>
+                                    <td>{{ $permission->guard_name }}</td>
                                     <td>{{ $permission->created_at }}</td>
                                     <td>{{ $permission->updated_at }}</td>
                                 </tr>
