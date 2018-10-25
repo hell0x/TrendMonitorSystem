@@ -9,10 +9,10 @@
 namespace App\Http\Controllers\Back;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 trait Indexable
 {
-
     protected $repository;
 
     protected $table;
@@ -22,13 +22,17 @@ trait Indexable
         $parameters = $this->getParameters($request);
 
         $records = $this->repository->getAll(config("app.nbrPages.back.$this->table"), $parameters);
-        foreach ($records as $val){
-            foreach($val->permissions as $val2){
-                print_r($val2->name."<br/>");
-            }
-//            print_r($val->permissions);
+        $links = $records->appends($parameters)->links('back.pagination');
+
+        if($request->ajax()){
+            return response()->json([
+                'table' => view("back.$this->table.table", [$this->table => $records])->render(),
+                'pagination' => $links->toHtml(),
+            ]);
         }
-//        $links = $records->
+
+        return view("back.$this->table.index", [$this->table => $records, 'links' => $links]);
+
     }
 
     /**

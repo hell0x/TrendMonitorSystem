@@ -8,7 +8,7 @@
 
 return [
 
-    'admUsers' => [
+    'adm_users' => [
         'order' => 'updated_at',
         'direction' => 'desc',
     ],

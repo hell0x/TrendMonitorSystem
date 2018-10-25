@@ -9,7 +9,6 @@
 namespace App\Repositories;
 
 use App\Models\Role;
-use App\Models\Permission;
 
 class RoleRepository
 {

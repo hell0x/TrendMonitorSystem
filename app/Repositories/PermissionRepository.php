@@ -8,8 +8,13 @@
 
 namespace App\Repositories;
 
+use App\Models\Permission;
 
 class PermissionRepository
 {
-
+    public function getAll($nbrPages, $parameters)
+    {
+        return Permission::orderBy($parameters['order'], $parameters['direction'])
+            ->paginate($nbrPages);
+    }
 }

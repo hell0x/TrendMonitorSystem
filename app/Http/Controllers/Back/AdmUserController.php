@@ -13,20 +13,12 @@ use Illuminate\Http\Request;
 
 class AdmUserController
 {
+    use Indexable;
 
-
-    protected $admUserRepository;
-
-    protected $nbrPages;
-
-    public function __construct(AdmUserRepository $admUserRepository)
+    public function __construct(AdmUserRepository $repository)
     {
-        $this->admUserRepository = $admUserRepository;
-        $this->nbrPages = config('app.nbrPages.back.admUsers');
-    }
+        $this->repository = $repository;
 
-    public function get()
-    {
-        
+        $this->table = 'adm_users';
     }
 }

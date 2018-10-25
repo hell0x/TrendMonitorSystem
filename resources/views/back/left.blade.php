@@ -88,13 +88,16 @@
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-files-o fa-fw"></i> 用户管理<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="blank.html">Blank Page</a>
+                        <a href="{{ route('admin.permission.index') }}">权限管理</a>
                     </li>
                     <li>
-                        <a href="login.html">Login Page</a>
+                        <a href="{{ route('admin.role.index') }}">角色管理</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('admin.adm_user.index') }}">用户管理</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

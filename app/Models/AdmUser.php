@@ -35,6 +35,6 @@ class AdmUser extends Authenticatable
      */
     public function roles()
     {
-        return $this->belongsToMany('App\Models\Role', 'model_has_roles');
+        return $this->belongsToMany('App\Models\Role', 'model_has_roles', 'model_id');
     }
 }

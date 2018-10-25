@@ -9,34 +9,14 @@
 namespace App\Repositories;
 
 use App\Models\AdmUser;
-use App\Models\Permission;
-use App\Models\Role;
 
 class AdmUserRepository
 {
-
-    //角色实例
-    protected $role;
-
-    //后台用户实例
-    protected $admUser;
-
-    //权限实例
-    protected $permission;
-
-    /**
-     * AdmUserRepository constructor.
-     * @param Role $role
-     * @param AdmUser $admUser
-     * @param Permission $permission
-     */
-    public function __construct(Role $role, AdmUser $admUser, Permission $permission)
+    public function getAll($nbrPages, $parameters)
     {
-        $this->role = $role;
-        $this->admUser = $admUser;
-        $this->permission = $permission;
+        return AdmUser::with('roles')
+            ->orderBy($parameters['order'], $parameters['direction'])
+            ->paginate($nbrPages);
     }
-
-
 
 }
