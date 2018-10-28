@@ -29,6 +29,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Back'], function ($router) {
 
     //权限
     $router->get('permission/index', 'PermissionController@index')->name('admin.permission.index');
+    $router->get('permission/create', 'PermissionController@create')->name('admin.permission.create');
+//    Route::resource('permissions', 'PermissionController');
 
     //角色
     $router->get('role/index', 'RoleController@index')->name('admin.role.index');

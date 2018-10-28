@@ -22,4 +22,9 @@ class PermissionController extends Controller
 
         $this->table = 'permissions';
     }
+
+    public function create()
+    {
+        return view('back.permissions.create');
+    }
 }
