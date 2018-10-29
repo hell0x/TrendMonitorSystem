@@ -11,7 +11,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     权限列表
-                    <a href="{{ route('admin.permission.create') }}" class="btn btn-primary">权限添加</a>
+                    <a href="{{ route('permissions.create') }}" class="btn btn-primary">权限添加</a>
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">

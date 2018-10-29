@@ -27,4 +27,9 @@ class PermissionController extends Controller
     {
         return view('back.permissions.create');
     }
+
+    public function store()
+    {
+        
+    }
 }
