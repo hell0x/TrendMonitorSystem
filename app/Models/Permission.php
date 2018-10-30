@@ -13,6 +13,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Permission extends Model
 {
+    /**
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'guard_name'
+    ];
 
     /**
      * 权限角色关系

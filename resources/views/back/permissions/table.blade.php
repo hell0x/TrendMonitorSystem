@@ -8,6 +8,14 @@
     <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
+            @if (session('post-ok'))
+                @component('back.components.alert')
+                    @slot('type')
+                        success
+                    @endslot
+                    {!! session('post-ok') !!}
+                @endcomponent
+            @endif
             <div class="panel panel-default">
                 <div class="panel-heading">
                     权限列表
@@ -24,6 +32,7 @@
                                 <td>权限类型</td>
                                 <th>创建时间</th>
                                 <th>更新时间</th>
+                                <td>操作</td>
                             </tr>
                             </thead>
                             <tbody>
@@ -34,6 +43,12 @@
                                     <td>{{ $permission->guard_name }}</td>
                                     <td>{{ $permission->created_at }}</td>
                                     <td>{{ $permission->updated_at }}</td>
+                                    <td>
+                                        <div class="col-md-12">
+                                            <a class="btn btn-success btn-xs col-md-5" href="{{ route('permissions.edit', [$permission->id]) }}" role="button" title="@lang('Show')"><i class="fa fa-list"></i></a>
+                                            <a class="btn btn-danger btn-xs col-md-offset-1 col-md-5" href="{{ route('permissions.destroy', [$permission->id]) }}" role="button" title="@lang('Show')"><i class="fa fa-times"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>

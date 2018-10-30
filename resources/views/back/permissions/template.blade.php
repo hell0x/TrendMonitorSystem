@@ -23,15 +23,20 @@
                                 @include('back.partials.input', [
                                     'input' => [
                                         'name' => 'guard_name',
-                                        'value' => isset($permission) ? $permission->grard_name : '',
+                                        'values' => isset($permission) ? $permission->guard_names : collect(),
                                         'input' => 'select',
+                                        'styles' => 'required',
+                                        'options' => $guard_names,
                                     ],
                                 ])
                                 @include('back.partials.specific', [
                                     'specific' => [
+                                        'name' => 'name',
+                                        'value' => isset($permission) ? $permission->name : '',
                                         'type' => 'inline-input',
                                         'position' => 'front',
                                         'contents' => isset($permission) ? $permission->name : '',
+                                        'required' => true,
                                     ],
                                 ])
                                 <button type="submit" class="btn btn-default">Submit</button>
