@@ -35,4 +35,12 @@ class PermissionRepository
 
         Permission::create($request->all());
     }
+
+    public function update(Request $request)
+    {
+        $request->merge(['guard_name' => $request->guard_name[0]]);
+        $request->merge(['name' => $request->guard_name.'_'.$request->name]);
+
+        Permission::create($request->all());
+    }
 }

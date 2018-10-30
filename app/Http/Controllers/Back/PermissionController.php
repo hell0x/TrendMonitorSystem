@@ -40,12 +40,14 @@ class PermissionController extends Controller
     public function edit(Permission $permission)
     {
         $guard_names = collect($this->guard_names)->pluck('title', 'id');
-        $permission->guard_names = collect($this->guard_names);
+        $permission->guard_names = collect($permission->name);
         return view('back.permissions.edit', compact('permission', 'guard_names'));
     }
 
-    public function update(Request $request, Permission $permission)
+    public function update(Request $request)
     {
+        $this->repository->update($request);
 
+        return back()->with('post-ok', __('The post has been successfully updated'));
     }
 }
