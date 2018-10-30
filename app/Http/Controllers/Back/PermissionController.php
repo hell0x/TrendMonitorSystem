@@ -17,6 +17,10 @@ class PermissionController extends Controller
 {
     use Indexable;
 
+    /**
+     * PermissionController constructor.
+     * @param PermissionRepository $repository
+     */
     public function __construct(PermissionRepository $repository)
     {
         $this->repository = $repository;
@@ -40,13 +44,20 @@ class PermissionController extends Controller
     public function edit(Permission $permission)
     {
         $guard_names = collect($this->guard_names)->pluck('title', 'id');
-        $permission->guard_names = collect($permission->name);
+        $permission->guard_names = collect(['id' => $permission->guard_name]);
+        print_r();
+        if($permission->guard_names->contains('id', 'back')){
+            echo '111';
+        }else{
+            echo '222';
+        }
+        dd();
         return view('back.permissions.edit', compact('permission', 'guard_names'));
     }
 
-    public function update(Request $request)
+    public function update(Request $request, Permission $permission)
     {
-        $this->repository->update($request);
+        $this->repository->update($request, $permission);
 
         return back()->with('post-ok', __('The post has been successfully updated'));
     }

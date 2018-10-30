@@ -35,7 +35,7 @@
                                         'value' => isset($permission) ? $permission->name : '',
                                         'type' => 'inline-input',
                                         'position' => 'front',
-                                        'contents' => isset($permission) ? $permission->name : '',
+                                        'contents' => '名称',
                                         'required' => true,
                                     ],
                                 ])

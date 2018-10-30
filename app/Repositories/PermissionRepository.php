@@ -9,7 +9,6 @@
 namespace App\Repositories;
 
 use App\Models\Permission;
-use Illuminate\Http\Request;
 
 class PermissionRepository
 {
@@ -27,20 +26,18 @@ class PermissionRepository
 
     /**
      * 添加权限
-     * @param Request $request
      */
-    public function store(Request $request)
+    public function store($request)
     {
         $request->merge(['guard_name' => $request->guard_name[0]]);
 
         Permission::create($request->all());
     }
 
-    public function update(Request $request)
+    public function update($request, $permission)
     {
         $request->merge(['guard_name' => $request->guard_name[0]]);
-        $request->merge(['name' => $request->guard_name.'_'.$request->name]);
 
-        Permission::create($request->all());
+        $permission->update($request->all());
     }
 }
