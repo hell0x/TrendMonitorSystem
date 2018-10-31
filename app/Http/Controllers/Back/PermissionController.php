@@ -44,14 +44,7 @@ class PermissionController extends Controller
     public function edit(Permission $permission)
     {
         $guard_names = collect($this->guard_names)->pluck('title', 'id');
-        $permission->guard_names = collect(['id' => $permission->guard_name]);
-        print_r();
-        if($permission->guard_names->contains('id', 'back')){
-            echo '111';
-        }else{
-            echo '222';
-        }
-        dd();
+        $permission->guard_names = collect([['id' => $permission->guard_name]]);
         return view('back.permissions.edit', compact('permission', 'guard_names'));
     }
 
@@ -59,6 +52,18 @@ class PermissionController extends Controller
     {
         $this->repository->update($request, $permission);
 
-        return back()->with('post-ok', __('The post has been successfully updated'));
+        return back()->with('post-ok', __('The permission has been successfully updated'));
+    }
+
+    public function show(Permission $permission)
+    {
+        echo '11';
+    }
+
+    public function destroy(Permission $permission)
+    {
+        $permission->delete();
+
+        return response()->json();
     }
 }
