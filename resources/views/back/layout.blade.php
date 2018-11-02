@@ -2,6 +2,7 @@
 <html lang="en">
 
 @include('back.head', ['title' => '首页-信息面板'])
+@yield('css')
 
 <body>
 
@@ -23,6 +24,7 @@
     <!-- /#wrapper -->
 
     @include('back.footer')
+    @yield('js')
 
 </body>
 

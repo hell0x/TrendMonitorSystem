@@ -14,3 +14,6 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="{{asset('back/dist/js/sb-admin-2.js')}}"></script>
+
+<!-- custom -->
+<script src="//cdn.jsdelivr.net/sweetalert2/6.3.8/sweetalert2.min.js"></script>

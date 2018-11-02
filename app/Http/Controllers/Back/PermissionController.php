@@ -38,7 +38,7 @@ class PermissionController extends Controller
     {
         $this->repository->store($request);
 
-        return redirect(route('permissions.index'))->with('post-ok', __('The permission has been successfully created'));
+        return redirect(route('permissions.index'))->with('permission-ok', __('The permission has been successfully created'));
     }
 
     public function edit(Permission $permission)
@@ -52,12 +52,12 @@ class PermissionController extends Controller
     {
         $this->repository->update($request, $permission);
 
-        return back()->with('post-ok', __('The permission has been successfully updated'));
+        return back()->with('permission-ok', __('The permission has been successfully updated'));
     }
 
     public function show(Permission $permission)
     {
-        echo '11';
+        dd('show');
     }
 
     public function destroy(Permission $permission)
