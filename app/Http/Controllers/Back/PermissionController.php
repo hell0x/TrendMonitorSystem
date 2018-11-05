@@ -55,11 +55,6 @@ class PermissionController extends Controller
         return back()->with('permission-ok', __('The permission has been successfully updated'));
     }
 
-    public function show(Permission $permission)
-    {
-        dd('show');
-    }
-
     public function destroy(Permission $permission)
     {
         $permission->delete();
