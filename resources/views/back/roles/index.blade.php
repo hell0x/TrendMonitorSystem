@@ -1,3 +1,5 @@
+@extends('back.layout')
+
 @section('css')
     <link rel="stylesheet" href="//cdn.jsdelivr.net/sweetalert2/6.3.8/sweetalert2.min.css">
     <style>

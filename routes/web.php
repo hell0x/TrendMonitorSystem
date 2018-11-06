@@ -34,8 +34,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Back'], function ($router) {
     Route::resource('permissions', 'PermissionController');
 
     //角色
-    $router->get('role/index', 'RoleController@index')->name('admin.role.index');
+//    $router->get('role/index', 'RoleController@index')->name('admin.role.index');
+    Route::resource('roles', 'RoleController');
 
     //后台用户
-    $router->get('adm_user/index', 'AdmUserController@index')->name('admin.adm_user.index');
+//    $router->get('adm_user/index', 'AdmUserController@index')->name('admin.adm_user.index');
+    Route::resource('adm_users', 'AdmUserController');
 });
+

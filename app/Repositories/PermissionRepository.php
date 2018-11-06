@@ -40,4 +40,5 @@ class PermissionRepository
 
         $permission->update($request->all());
     }
+
 }

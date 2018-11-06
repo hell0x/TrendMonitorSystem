@@ -94,10 +94,10 @@
                         <a href="{{ route('permissions.index') }}">权限管理</a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.role.index') }}">角色管理</a>
+                        <a href="{{ route('roles.index') }}">角色管理</a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.adm_user.index') }}">用户管理</a>
+                        <a href="{{ route('adm_users.index') }}">用户管理</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

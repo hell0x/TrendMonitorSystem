@@ -6,11 +6,11 @@
     @if ($input['input'] === 'textarea')
         <textarea class="form-control" rows="{{ $input['rows'] }}" id="{{ $input['name'] }}" name="{{ $input['name'] }}" @if ($input['required']) required @endif>{{ old($input['name'], $input['value']) }}</textarea>
     @elseif ($input['input'] === 'checkbox')
-        <div class="checkbox">
-            <label>
-                <input id="{{ $input['name'] }}" name="{{ $input['name'] }}" type="checkbox" {{ $input['value'] ? 'checked' : '' }}>{{ $input['label'] }}
+        @foreach($input['options'] as $option)
+            <label class="checkbox-inline">
+                <input type="checkbox" name="{{ $input['name'] }}" id="{{ $option->id }}" value="{{ $option->id }}" {{ ($input['values']->contains('id', $option->id)) ? 'checked' : '' }}>{{ $option->name }}
             </label>
-        </div>
+        @endforeach
     @elseif ($input['input'] === 'select')
         <select {{ $input['styles'] }} class="form-control" name="{{ $input['name'] }}[]" id="{{ $input['name'] }}">
             @foreach($input['options'] as $id => $title)
@@ -19,6 +19,12 @@
         </select>
     @elseif ($input['input'] === 'slider')
         <input class="slider" id="{{ $input['name'] }}" name="{{ $input['name'] }}" type="text" data-slider-min="{{ $input['min'] }}" data-slider-max="{{ $input['max'] }}" data-slider-step="1" data-slider-value="{{ old($input['name'], $input['value']) }}"/>
+    @elseif($input['input'] === 'radio')
+        @foreach($input['options'] as $id => $title)
+            <label class="radio-inline">
+                <input type="radio" name="{{ $input['name'] }}" id="{{ $title }}" value="{{ $id }}" {{ ($id === $input['check']) ? 'checked' : '' }}>{{ $title }}
+            </label>
+        @endforeach
     @else
         <input type="text" class="form-control" id="{{ $input['name'] }}" name="{{ $input['name'] }}" value="{{ old($input['name'], $input['value']) }}" @if ($input['required']) required @endif>
     @endif

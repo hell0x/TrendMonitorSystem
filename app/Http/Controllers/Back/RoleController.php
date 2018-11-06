@@ -26,13 +26,16 @@ class RoleController extends Controller
 
     public function create()
     {
-        $guard_names = collect($this->guard_names)->pluck('title', 'id');
-        return view('back.roles.create', compact('guard_names'));
+        $web_permissions = $this->repository->queryPermissionByGrardName('web');
+        $back_permissions = $this->repository->queryPermissionByGrardName('back');
+        return view('back.roles.create', compact('web_permissions', 'back_permissions'));
     }
 
     public function store(Request $request)
     {
+        $this->repository->store($request);
 
+        return redirect(route('roles.index'))->with('role-ok', __('The role has been successfully created'));
     }
 
     public function edit(Role $role)
