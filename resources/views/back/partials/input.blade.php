@@ -8,7 +8,7 @@
     @elseif ($input['input'] === 'checkbox')
         @foreach($input['options'] as $option)
             <label class="checkbox-inline">
-                <input type="checkbox" name="{{ $input['name'] }}" id="{{ $option->id }}" value="{{ $option->id }}" {{ ($input['values']->contains('id', $option->id)) ? 'checked' : '' }}>{{ $option->name }}
+                <input type="checkbox" name="{{ $input['name'] }}[]" id="{{ $option->id }}" value="{{ $option->id }}" {{ ($input['values']->contains('id', $option->id)) ? 'checked' : '' }}>{{ $option->name }}
             </label>
         @endforeach
     @elseif ($input['input'] === 'select')

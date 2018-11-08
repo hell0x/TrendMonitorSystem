@@ -32,8 +32,9 @@ class Role extends Model
     /**
      * 角色用户关系
      */
-    public function Users()
+    public function users()
     {
 //        return $this->belongsToMany('App\Models\AdmUser');
     }
+
 }

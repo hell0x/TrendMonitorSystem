@@ -37,12 +37,26 @@ class RoleRepository
         return Permission::where('guard_name', $guardName)->get();
     }
 
+    /**
+     * @param $request
+     */
     public function store($request)
     {
         $guard_name = !empty($request->web_permission) ? 'web' : 'back';
         $request->merge(['guard_name' => $guard_name]);
 
         $role = Role::create($request->all());
-        $role->givePermissionTo('ttt');
+
+        $this->savePermissions($role, $request);
+    }
+
+    /**
+     * @param \App\Models\Role $role
+     * @param $request
+     */
+    protected function savePermissions($role, $request)
+    {
+        $permissions = !empty($request->web_permission) ? $request->web_permission : $request->back_permission;
+        $role->permissions()->sync($permissions);
     }
 }
