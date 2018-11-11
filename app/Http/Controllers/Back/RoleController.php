@@ -40,16 +40,22 @@ class RoleController extends Controller
 
     public function edit(Role $role)
     {
-
+        $web_permissions = $this->repository->queryPermissionByGrardName('web');
+        $back_permissions = $this->repository->queryPermissionByGrardName('back');
+        return view('back.roles.edit', compact('role', 'web_permissions', 'back_permissions'));
     }
 
     public function update(Request $request, Role $role)
     {
+        $this->repository->update($request, $role);
 
+        return back()->with('role-ok', __('The role has been successfully updated'));
     }
 
     public function destroy(Role $role)
     {
+        $role->delete();
 
+        return response()->json();
     }
 }

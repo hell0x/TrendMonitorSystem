@@ -50,6 +50,16 @@ class RoleRepository
         $this->savePermissions($role, $request);
     }
 
+    public function update($request, $role)
+    {
+        $guard_name = !empty($request->web_permission) ? 'web' : 'back';
+        $request->merge(['guard_name' => $guard_name]);
+
+        $role->update($request->all());
+
+        $this->savePermissions($role, $request);
+    }
+
     /**
      * @param \App\Models\Role $role
      * @param $request

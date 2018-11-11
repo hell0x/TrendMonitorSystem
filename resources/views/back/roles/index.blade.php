@@ -36,6 +36,7 @@
                                     <td>权限类型</td>
                                     <th>创建时间</th>
                                     <th>更新时间</th>
+                                    <td>操作</td>
                                 </tr>
                                 </thead>
                                 <tbody id="pannel">
@@ -71,7 +72,7 @@
         var role = (function () {
 
             var url = '{{ route('roles.index') }}'
-            var swalTitle = '@lang('Really destroy permission ?')'
+            var swalTitle = '@lang('Really destroy role ?')'
             var confirmButtonText = '@lang('Yes')'
             var cancelButtonText = '@lang('No')'
             var errorAjax = '@lang('Looks like there is a server issue...')'
