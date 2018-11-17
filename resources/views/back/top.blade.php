@@ -5,7 +5,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+    <a class="navbar-brand" href="{{ route('admin.index') }}">热点监控分析系统</a>
 </div>
 <!-- /.navbar-header -->
 

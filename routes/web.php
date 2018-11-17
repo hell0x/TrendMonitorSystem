@@ -25,7 +25,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Back'], function ($router) {
     $router->post('login', 'LoginController@login')->name('admin.login');
     $router->get('logout', 'LoginController@logout')->name('admin.logout');
 
-    $router->get('index', 'IndexController@index');
+    $router->get('index', 'IndexController@index')->name('admin.index');
 
     //权限
 //    $router->get('permission/index', 'PermissionController@index')->name('admin.permission.index');

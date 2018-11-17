@@ -4,7 +4,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Dashboard</h1>
+                <h1 class="page-header">数据概览</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -104,7 +104,7 @@
             <div class="col-lg-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 热度统计
                         <div class="pull-right">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -134,7 +134,7 @@
                 <!-- /.panel -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <i class="fa fa-bar-chart-o fa-fw"></i> Bar Chart Example
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 影响力评分表
                         <div class="pull-right">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -236,7 +236,7 @@
                 <!-- /.panel -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <i class="fa fa-clock-o fa-fw"></i> Responsive Timeline
+                        <i class="fa fa-clock-o fa-fw"></i> 因素加权
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -351,7 +351,7 @@
             <div class="col-lg-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <i class="fa fa-bell fa-fw"></i> Notifications Panel
+                        <i class="fa fa-bell fa-fw"></i> 热度榜单
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -410,7 +410,7 @@
                 <!-- /.panel -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <i class="fa fa-bar-chart-o fa-fw"></i> Donut Chart Example
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 因素占比
                     </div>
                     <div class="panel-body">
                         <div id="morris-donut-chart"></div>
@@ -421,7 +421,7 @@
                 <!-- /.panel -->
                 <div class="chat-panel panel panel-default">
                     <div class="panel-heading">
-                        <i class="fa fa-comments fa-fw"></i> Chat
+                        <i class="fa fa-comments fa-fw"></i> 事件时间线
                         <div class="btn-group pull-right">
                             <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-chevron-down"></i>
