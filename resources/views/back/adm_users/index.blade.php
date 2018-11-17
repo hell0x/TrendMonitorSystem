@@ -23,7 +23,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         用户列表
-                        <a href="{{ route('adm_users.create') }}" class="btn btn-primary">用户添加</a>
+                        {{--<a href="{{ route('adm_users.create') }}" class="btn btn-primary">用户添加</a>--}}
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -33,10 +33,9 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>用户名</th>
-                                    <td>角色类型</td>
                                     <th>创建时间</th>
                                     <th>更新时间</th>
-                                    <td>操作</td>
+                                    {{--<td>操作</td>--}}
                                 </tr>
                                 </thead>
                                 <tbody id="pannel">

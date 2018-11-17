@@ -284,7 +284,7 @@ return [
         ],
         'back' => [
             'roles' => 10,
-            'admUsers' => 10,
+            'adm_users' => 10,
             'permissions' => 10,
         ],
     ],

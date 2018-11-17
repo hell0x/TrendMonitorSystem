@@ -15,7 +15,7 @@ class AdmUserRepository
 {
     public function getAll($nbrPages, $parameters)
     {
-        return AdmUser::with('adm_users')
+        return AdmUser::with('roles')
             ->orderBy($parameters['order'], $parameters['direction'])
             ->paginate($nbrPages);
     }

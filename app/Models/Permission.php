@@ -23,7 +23,7 @@ class Permission extends Model
     /**
      * 权限角色关系
      */
-    public function Roles()
+    public function roles()
     {
         return $this->belongsToMany('App\Models\Role');
     }

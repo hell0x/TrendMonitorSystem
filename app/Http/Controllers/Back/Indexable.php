@@ -20,7 +20,6 @@ trait Indexable
     public function index(Request $request)
     {
         $parameters = $this->getParameters($request);
-
         $records = $this->repository->getAll(config("app.nbrPages.back.$this->table"), $parameters);
         $links = $records->appends($parameters)->links('back.pagination');
 
