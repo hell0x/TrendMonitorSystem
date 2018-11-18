@@ -40,5 +40,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Back'], function ($router) {
     //后台用户
 //    $router->get('adm_user/index', 'AdmUserController@index')->name('admin.adm_user.index');
     Route::resource('adm_users', 'AdmUserController');
+
+    //热点
+
+    //热点配置
+    Route::resource('sources', 'SourceController');
 });
 

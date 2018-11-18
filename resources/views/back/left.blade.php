@@ -22,7 +22,7 @@
                         <a href="#">热度查看</a>
                     </li>
                     <li>
-                        <a href="#">热度配置</a>
+                        <a href="{{ route('sources.index') }}">来源配置</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

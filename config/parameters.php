@@ -20,4 +20,8 @@ return [
         'order' => 'updated_at',
         'direction' => 'desc',
     ],
+    'sources' => [
+        'order' => 'updated_at',
+        'direction' => 'desc',
+    ],
 ];

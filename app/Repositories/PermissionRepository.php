@@ -29,14 +29,14 @@ class PermissionRepository
      */
     public function store($request)
     {
-        $request->merge(['guard_name' => $request->guard_name[0]]);
+        $request->merge(['guard_name' => $request->guard_name]);
 
         Permission::create($request->all());
     }
 
     public function update($request, $permission)
     {
-        $request->merge(['guard_name' => $request->guard_name[0]]);
+        $request->merge(['guard_name' => $request->guard_name]);
 
         $permission->update($request->all());
     }
