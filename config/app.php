@@ -291,6 +291,7 @@ return [
             'roles' => 10,
             'adm_users' => 10,
             'permissions' => 10,
+            'sources' => 10,
         ],
     ],
 

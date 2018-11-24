@@ -24,4 +24,8 @@ return [
         'order' => 'updated_at',
         'direction' => 'desc',
     ],
+    'factors' => [
+        'order' => 'id',
+        'direction' => 'asc',
+    ],
 ];

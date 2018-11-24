@@ -27,23 +27,29 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Back'], function ($router) {
 
     $router->get('index', 'IndexController@index')->name('admin.index');
 
-    //权限
-//    $router->get('permission/index', 'PermissionController@index')->name('admin.permission.index');
-//    $router->get('permission/create', 'PermissionController@create')->name('admin.permission.create');
-//    $router->get('permission/store', 'PermissionController@store')->name('admin.permission.store');
-    Route::resource('permissions', 'PermissionController');
-
-    //角色
-//    $router->get('role/index', 'RoleController@index')->name('admin.role.index');
-    Route::resource('roles', 'RoleController');
-
-    //后台用户
-//    $router->get('adm_user/index', 'AdmUserController@index')->name('admin.adm_user.index');
-    Route::resource('adm_users', 'AdmUserController');
-
-    //热点
-
-    //热点配置
+    /************************ 热点start **********************/
+    //来源配置
     Route::resource('sources', 'SourceController');
+    /************************ 热点end **********************/
+
+    /************************ 因素管理start **********************/
+    //因素配置
+    Route::resource('factors', 'FactorController');
+    /************************ 因素管理end **********************/
+
+    /************************ 影响力预估start **********************/
+    /************************ 影响力预估end **********************/
+
+    /************************ 文章管理start **********************/
+    /************************ 文章管理end **********************/
+
+    /************************ 用户管理start **********************/
+    //权限
+    Route::resource('permissions', 'PermissionController');
+    //角色
+    Route::resource('roles', 'RoleController');
+    //后台用户
+    Route::resource('adm_users', 'AdmUserController');
+    /************************ 用户管理end **********************/
 });
 
