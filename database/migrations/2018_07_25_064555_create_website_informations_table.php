@@ -14,6 +14,8 @@ class CreateWebsiteInformationsTable extends Migration
     {
         Schema::create('website_informations', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('url');
             $table->timestamps();
         });
     }
